@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: server
+spec:
+  replicas: 3
+  selector:
+    app: server
+  template:
+    metadata:
+      labels:
+        app: server
+    spec:
+      containers:
+      - name: server
+        image: naokinakao/restapi-01
+        ports:
+        - name: http
+          containerPort: 8080
+        - name: https
+          containerPort: 8443
