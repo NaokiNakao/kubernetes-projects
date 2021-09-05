@@ -1,0 +1,360 @@
+:root {
+    /* Primary colors */
+    --pink: hsl(322, 100%, 66%);
+    --light-pink: hsl(321, 100%, 78%);
+    --light-red: hsl(0, 100%, 63%);
+
+    /* Neutral colors */
+    --very-dark-cyan:hsl(192, 100%, 9%);
+    --very-pale-blue: hsl(207, 100%, 98%);
+
+    /* Font styles */
+    --poppins: 'Poppins', sans-serif;
+    --open-sans: 'Open Sans', sans-serif;
+}
+
+/* general styles */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* header styles */
+
+.pg-header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.pg-header > * {
+    flex: 1;
+    display: flex;
+    margin: 0.6em;
+}
+
+.pg-header__logo {
+    justify-content: flex-start;
+}
+
+.pg-header__logo > img {
+    height: 1em;
+    align-self: center;
+}
+
+.pg-header__btn {
+    justify-content: flex-end;
+}
+
+.pg-header__btn > button{
+    align-self: flex-end;
+    outline: none;
+    display: block;
+    border: 1px solid var(--light-pink);
+    font-family: var(--open-sans);
+    font-weight: 400;
+    font-size: 0.8em;
+    text-transform: capitalize;
+    color: var(--light-pink);
+    background: #ffffff;
+    padding: 0.3em 1.5em;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 3px;
+}
+
+/* card styles */
+
+.card {
+    display: flex;
+    justify-content: center;
+}
+
+.card > img {
+    width: 90%;
+}
+
+/* containers styles */
+
+.container {
+    text-align: center;
+}
+
+.container__img {
+    margin: 3em 0;
+}
+
+.container__img > img {
+    width: 70%;
+}
+
+.container__hd {
+    font-family: var(--poppins);
+    font-weight: 700;
+    color: var(--very-dark-cyan);
+}
+
+.container__txt {
+    font-family: var(--open-sans);
+    font-weight: 400;
+    font-size: 0.8em;
+    color: var(--very-dark-cyan);
+}
+
+.container__txt > p {
+    margin: 0.6em 3.35em;
+}
+
+.container__btn {
+    margin: 3em 0;
+    outline: none;
+    border: none;
+    font-family: var(--open-sans);
+    font-weight: 600;
+    font-size: 0.9em;
+    color: var(--very-pale-blue);
+    background: var(--pink);
+    padding: 0.7em 3em;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.container--one {
+    margin: 5em 0;
+}
+
+.container--one > .container__hd > h1 {
+    margin: 0.6em 1em;
+}
+
+.container--two, .container--three, .container--four {
+    margin: 7em 0;
+}
+
+.container--two, .container--four {
+    background-color: var(--very-pale-blue);
+}
+
+.container--two > .container__bg-section-top {
+    content: url(images/bg-section-top-mobile-1.svg);
+    background-color: #ffffff;
+}
+
+.container--two > .container__bg-section-bottom {
+    content: url(images/bg-section-bottom-mobile-1.svg);
+    background-color: #ffffff;
+} 
+
+.container--four > .container__bg-section-top {
+    content: url(images/bg-section-top-mobile-2.svg);
+    background-color: #ffffff;
+}
+
+.container--four > .container__bg-section-bottom {
+    content: url(images/bg-section-bottom-mobile-2.svg);
+    background-color: #ffffff;
+} 
+
+.container--two > .container__txt {
+    margin-bottom: 3em;
+}
+
+.container--four > .container__txt {
+    margin-bottom: 7em;
+}
+
+/* stats styles */
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    margin: 3em 0;
+}
+
+.stats__cnt {
+    margin: 4em 0;
+}
+
+.stats__cnt > ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.stats__cnt > ul > li {
+    width: 70%;
+    align-self: center;
+}
+
+.stats__cnt > ul > li > img {
+    height: 2em;
+}
+
+.stats__cnt > ul > li > strong {
+    font-family: var(--open-sans);
+    font-weight: 700;
+    font-size: 5em;
+    color: var(--very-dark-cyan);
+}
+
+.stats__cnt > ul > li > small {
+    font-family: var(--open-sans);
+    font-weight: 400;
+    font-size: 1.1em;
+    color: var(--very-dark-cyan);
+}
+
+.stats__cnt > ul > li:last-child {
+    text-align: center;
+}
+
+/* footer styles */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10em;
+    background-color: var(--very-dark-cyan);
+}
+
+footer > * {
+    flex: 1;
+}
+
+footer > div {
+    content: url(images/bg-footer-top-mobile.svg);
+    background-color: #ffffff;
+    margin-bottom: 3em;
+}
+
+footer > section {
+    margin: 0 2em;
+}
+
+.newsletter {
+    margin-bottom: 4em;
+}
+
+.newsletter__hd {
+    margin-bottom: 0.7em;
+    text-transform: uppercase;
+    font-family: var(--poppins);
+    font-size: 1.2em;
+    color: #ffffff;
+}
+
+.newsletter__input {
+    margin-top: 2em;
+    text-align: center;
+}
+
+.newsletter__input::after {
+    content: attr(data-error);
+    font-family: var(--open-sans);
+    font-weight: 400;
+    font-size: 0.8em;
+    color: var(--light-red);
+}
+
+.newsletter__input > input {
+    width: 100%;
+    line-height: 2.5em;
+    border: none;
+    outline: none;
+    padding: 0 1em;
+    border-radius: 5px;
+}
+
+.newsletter__btn {
+    float: right;
+    margin: 1em 0;
+    outline: none;
+    border: none;
+    font-family: var(--open-sans);
+    font-weight: 600;
+    color: var(--very-pale-blue);
+    background: var(--pink);
+    padding: 0.7em 2.5em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.newsletter__btn:hover {
+    background-color: var(--light-pink);
+}
+
+.footer--txt {
+    font-family: var(--open-sans);
+    font-weight: 400;
+    font-size: 0.9em;
+    line-height: 1.8em;
+    color: #ffffff;
+}
+
+.contact-us__logo {
+    display: inline-block;
+}
+
+.contact-us__logo > img {
+    height: 1.8em;
+    filter: brightness(100);
+}
+
+.contact-us__hd {
+    display: inline-block;
+    font-family: var(--open-sans);
+    font-weight: 700;
+    font-size: 1.5em;
+    color: #ffffff;
+}
+
+.contact-us__phone, .contact-us__email {
+    font-family: var(--open-sans);
+    font-weight: 400;
+    font-size: 0.9em;
+    color: #ffffff;
+}
+
+.contact-us__txt {
+    margin: 1em 0;
+}
+
+.contact-us__phone, .contact-us__email {
+    margin: 2em 0;
+} 
+
+.contact-us__phone > img, .contact-us__email > img {
+    margin-right: 1em;
+}
+
+.contact-us__social {
+    margin: 1em 0;
+}
+
+.contact-us__social > ul {
+    list-style: none;
+    float: left;
+    padding: 2em 0;
+}
+
+.contact-us__social > ul > li {
+    margin-right: 1em;
+    float: left;
+}
+
+.contact-us__social > ul > li > i {
+    font-size: 1.8em;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.contact-us__social > ul > li > i:hover {
+    color: #3498db;
+}
+
